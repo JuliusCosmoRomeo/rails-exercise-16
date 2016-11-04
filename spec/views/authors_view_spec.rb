@@ -19,7 +19,7 @@ RSpec.describe '/authors/new', :type => :feature do
 	describe "Has field for homepage"
 		it "checks if a submit button exists" do
 			visit '/authors/new'
-			expect(page).to have_selector("input[type=submit][value='#{submit}']")
+			expect(page).to have_button("Create Author")
 		end
 	
 end
