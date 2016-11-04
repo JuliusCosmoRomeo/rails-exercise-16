@@ -6,4 +6,15 @@ RSpec.describe '/authors/new', :type => :feature do
 			visit '/authors/new'
 			expect(page).to have_text("First name")
 		end
+	describe "Has last name field"
+		it "checks if the last name field exists" do
+			visit '/authors/new'
+			expect(page).to have_text("Last name")
+		end
+	describe "Has field for homepage"
+		it "checks if the homepage field exists" do
+			visit '/authors/new'
+			expect(page).to have_text("Homepage")
+		end
+	
 end
