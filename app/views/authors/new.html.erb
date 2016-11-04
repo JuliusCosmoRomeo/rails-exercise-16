@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-First Name
+New Author
 
 <%= form_for :author do |f| %>
 
@@ -7,4 +7,13 @@ First Name
     <%= f.label :first_name %><br>
     <%= f.text_field :first_name %>
   </p>
+  <p>
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </p>
+  <p>
+    <%= f.label :homepage %><br>
+    <%= f.text_field :homepage %>
+  </p>
+  
 <% end %>
