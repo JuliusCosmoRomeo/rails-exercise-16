@@ -1,9 +1,10 @@
 <p id="notice"><%= notice %></p>
+First Name
 
-<h1>views/home/index.html.erb</h1>
-<%= form_for :article do |f| %>
-<p>
-	<%= f.text_field :title %>
-</p>
+<%= form_for :author do |f| %>
+
+  <p>
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </p>
 <% end %>
-Paper Management System
