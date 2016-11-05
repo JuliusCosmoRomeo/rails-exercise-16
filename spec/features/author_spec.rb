@@ -9,6 +9,6 @@ describe "Author page", :type => :feature do
     fill_in 'Homepage', with: 'http://wikipedia.org/Alan_Turing'
 	
 	click_button 'Create Author'    
-    expect Author.find(first_name:'Alan', last_name:'Turing', homepage:'http://wikipedia.org/Alan_Turing').to exist
+    expect(Author.where(first_name:"Alan", last_name:"Turing", homepage:"http://wikipedia.org/Alan_Turing")).to exist
   end
 end

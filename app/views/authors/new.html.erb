@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 New Author
 
-<%= form_for :author do |f| %> <!-- url -> authors_path nicht vergessen-->
+<%= form_for :author, url: authors_path do |f| %> <!-- url -> authors_path nicht vergessen-->
 
   <p>
     <%= f.label :first_name %><br>
