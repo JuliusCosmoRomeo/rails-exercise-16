@@ -10,6 +10,11 @@ RSpec.describe Author, type: :model do
   		expect(@author.homepage).to eq("http://wikipedia.de/Alan_Turing")
   		
   	end
+  describe "full name as first name + last name" 
+  	it "checks if name method returns full name" do
+  		@author= create(:author)
+  		expect(@author.name).to eq("Alan Turing")
+  	end
   #pending "add some examples to (or delete) #{__FILE__}"
 end
 
