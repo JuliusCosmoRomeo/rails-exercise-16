@@ -7,14 +7,14 @@ RSpec.describe '/authors/new', type: :view  do
 	describe "Has first name field"
 		it "checks if the first name field exists" do
 			render :template => '/authors/show.html.erb'
-			expect(rendered).to have_text(@author.first_name)
+			expect(rendered).to have_text('Alan')
 		end
 		it "checks if the last name field exists" do
 			render :template => '/authors/show.html.erb'
-			expect(rendered).to have_text(@author.last_name)
+			expect(rendered).to have_text('Turing')
 		end
 		it "checks if the homepage field exists" do
 			render :template => '/authors/show.html.erb'
-			expect(rendered).to have_text(@author.homepage)
+			expect(rendered).to have_text('http://wikipedia.org/Alan_Turing')
 		end
 end
