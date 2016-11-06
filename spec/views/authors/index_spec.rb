@@ -8,7 +8,7 @@ RSpec.describe '/authors/index', type: :view  do
 	describe "Contains 'alan turing'"
 		it "checks if 'alan turing' exists" do
 			render :template => '/authors/index.html.erb'
-			expect(rendered).to have_text("Alan Turing homepage: http://wikipedia.de/alan_turing")
+			expect(rendered).to have_text("Alan Turing http://wikipedia.de/Alan_Turing")
 		end
 		
 end
