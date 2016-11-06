@@ -13,7 +13,8 @@ RSpec.describe '/authors/index', type: :view  do
 	describe "first and last name in one column"
 		it "checks if a css tag 'th' with text 'name' exists" do
 			render :template => '/authors/index.html.erb'
-			expect(rendered).to have_css("th#name")
+			expect(rendered).to have_css("th", text: "Name")
+
 		end
 		
 end
