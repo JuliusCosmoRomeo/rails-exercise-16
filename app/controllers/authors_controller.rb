@@ -10,8 +10,8 @@ class AuthorsController < ApplicationController
 
 
   	@author.save
-  	redirect_to @author
-  	#render "new"
+  	#redirect_to @author
+  	render "new"
   end
   def author_params
   	params.require(:author).permit(:first_name, :last_name, :homepage)

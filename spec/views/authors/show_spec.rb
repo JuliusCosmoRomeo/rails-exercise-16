@@ -15,6 +15,6 @@ RSpec.describe '/authors/new', type: :view  do
 		end
 		it "checks if the homepage field exists" do
 			render :template => '/authors/show.html.erb'
-			expect(rendered).to have_text('http://wikipedia.org/Alan_Turing')
+			expect(rendered).to have_text('http://wikipedia.de/Alan_Turing')
 		end
 end
