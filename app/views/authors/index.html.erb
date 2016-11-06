@@ -1,0 +1,15 @@
+<h1>Listing authors</h1>
+ 
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+  </tr>
+ 
+  <% @authors.each do |author| %>
+    <tr>
+      <td><%= author.first_name %></td>
+      <td><%= author.last_name %></td>
+    </tr>
+  <% end %>
+</table>
