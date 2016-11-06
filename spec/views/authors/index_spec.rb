@@ -2,8 +2,7 @@ require 'rails_helper'
 #require 'capybara/rspec'
 RSpec.describe '/authors/index', type: :view  do
 	before(:context) do
-		@author = create(:author)
-		@authors = Author.all
+		@authors = [create(:author)]
 	end
 	describe "Contains 'alan turing'"
 		it "checks if 'alan turing' exists" do
