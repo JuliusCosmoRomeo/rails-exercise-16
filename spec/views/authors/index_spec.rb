@@ -19,7 +19,7 @@ RSpec.describe '/authors/index', type: :view  do
 	describe "link to 'new author'-page"
 		it "checks if a css tag 'a' with text 'add author' exists" do
 			render :template => '/authors/index.html.erb'
-			expect(rendered).to have_css("a", text: "add author")
+			expect(rendered).to have_css("a", text: "Add author")
 
 		end
 		
