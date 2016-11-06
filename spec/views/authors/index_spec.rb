@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+require 'capybara/rspec'
 RSpec.describe '/authors/index', type: :view  do
 	before(:context) do
 		@author = create(:author)
@@ -9,6 +9,11 @@ RSpec.describe '/authors/index', type: :view  do
 		it "checks if 'alan turing' exists" do
 			render :template => '/authors/index.html.erb'
 			expect(rendered).to have_text("Alan Turing http://wikipedia.de/Alan_Turing")
+		end
+	describe "first and last name in one column"
+		it "checks if a css tag 'th' with text 'name' exists" do
+			render :template => '/authors/index.html.erb'
+			expect(rendered).to have_css("th#name")
 		end
 		
 end
