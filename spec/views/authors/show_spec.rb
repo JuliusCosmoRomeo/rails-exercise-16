@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe '/authors/new', type: :view  do
-	before(:context) do
+	before(:each) do
 		@author = create(:author)
 	end
 	describe "Has first name field"
