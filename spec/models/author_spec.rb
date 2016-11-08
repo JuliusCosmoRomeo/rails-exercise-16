@@ -18,7 +18,8 @@ RSpec.describe Author, type: :model do
   	end
   describe "Validation test"
     it "should require a last name" do
-      expect(create(:author, last_name: nil)).to_not be_valid
+      #expect(create(:author, last_name: nil)).to_not be_valid
+      expect(Author.create(last_name: nil)).to_not be_valid
     end
   #pending "add some examples to (or delete) #{__FILE__}"
 
