@@ -1,7 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe AuthorsController, type: :controller do
-	describe "Get new authors"
+	before :context do
+		create(:author)
+	end
+
+	describe "Get new authors page"
 		it "renders the 'new authors' page" do
 			get :new
 			expect(response).to render_template("new")
