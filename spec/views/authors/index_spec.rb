@@ -1,31 +1,17 @@
 require 'rails_helper'
 require 'capybara/rspec'
 RSpec.describe '/authors/index', type: :view  do
-	before(:context) do
-		@authors = [create(:author)]
-	end
+	
+
+	
 	describe "Contains 'alan turing'"
-		it "checks if 'alan turing' exists" do
+		it "checks if site complete" do
+			@authors = [create(:author)]
 			render :template => '/authors/index.html.erb'
 			expect(rendered).to have_text("Alan Turing http://wikipedia.de/Alan_Turing")
-		end
-	describe "first and last name in one column"
-		it "checks if a css tag 'th' with text 'name' exists" do
-			render :template => '/authors/index.html.erb'
 			expect(rendered).to have_selector "th", text: "Name"
-
-		end
-	describe "link to 'new author'-page"
-		it "checks if a css tag 'a' with text 'add author' exists" do
-			render :template => '/authors/index.html.erb'
 			expect(rendered).to have_selector "a", text: "Add author"
-
-		end
-	describe "link to 'show author'-page"
-		it "checks if a css tag 'a' with text 'add author' exists" do
-			render :template => '/authors/index.html.erb'
-			expect(rendered).to have_selector "a", :text => "Show"
-
+			expect(rendered).to have_selector "a", text: "Show"
 		end
 		
 end
