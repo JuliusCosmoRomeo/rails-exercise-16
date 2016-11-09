@@ -20,6 +20,7 @@ RSpec.describe AuthorsController, type: :controller do
 		end
 	describe "Authors edit page"
 		it "should render" do
+			create(:author)
 			get :edit, id: 1
 			expect(response).to render_template("edit")
 		end
