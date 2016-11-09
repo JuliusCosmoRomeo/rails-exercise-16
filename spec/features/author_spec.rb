@@ -11,6 +11,7 @@ describe "Author page", :type => :feature do
 	click_button 'Create Author'    
     expect(Author.where(first_name:"Alan", last_name:"Turing", homepage:"http://wikipedia.org/Alan_Turing")).to exist
   end
+  
   it "should create message when user inserts blank last name" do
 	visit new_author_path
 	fill_in 'First name', with: 'Alan'
@@ -19,6 +20,15 @@ describe "Author page", :type => :feature do
 	
 	click_button 'Create Author'
 	expect(page).to have_text("Last name can't be blank")
-end			
-
+  end			
+describe "Author edit page"
+  it "should update an author" do
+  @author = create(:author)
+  visit edit_author_path(@author)
+  fill_in 'First name', with: 'Alan Mathison'
+  
+  click_button 'Edit Author'
+  #expect(Author.where(first_name:"Alan Mathison", last_name:"Turing", homepage:"http://wikipedia.org/Alan_Turing")).to exist
+  expect(Author.find(@author.id).first_name).to eq("Alan Mathison") 
+  end
 end
