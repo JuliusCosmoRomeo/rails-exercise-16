@@ -11,6 +11,7 @@ RSpec.describe '/authors/index', type: :view  do
 			expect(rendered).to have_text("Alan Turing http://wikipedia.de/Alan_Turing")
 			expect(rendered).to have_selector "th", text: "Name"
 			expect(rendered).to have_selector "a", text: "Add author"
+			expect(rendered).to have_selector "a", text: "Edit"
 			expect(rendered).to have_selector "a", text: "Show"
 		end
 		
