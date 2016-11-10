@@ -6,4 +6,10 @@ RSpec.describe PapersController, type: :controller do
 		get :new
 		expect(response).to render_template("new")
 	end
+	it "should render 'show paper' page " do
+		create(:paper)
+		get :show, id: 1
+		expect(response).to render_template("show")
+	end
+	
 end
