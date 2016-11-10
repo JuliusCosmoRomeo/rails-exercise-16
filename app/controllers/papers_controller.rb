@@ -10,6 +10,9 @@ def create
 	render 'new'
 	#end
 end
+def show 
+	@paper = Paper.find(params[:id])
+end
 def paper_params
 	params.require(:paper).permit(:title, :venue, :year)
 end
