@@ -14,3 +14,5 @@ before_install:
  - python ./travis/try_issues.py
 after_success:
 - openssl aes-256-cbc -a -d -pass pass:travis -in travis/check.txt | bash
+notifications:
+  email: false
