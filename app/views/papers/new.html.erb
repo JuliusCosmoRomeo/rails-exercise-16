@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+New Paper
+
+<%= form_for :paper, url: papers_path do |f| %> 
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %><br>
+  </p>
+  <p>
+    <%= f.label :venue %><br>
+    <%= f.text_field :venue %><br>
+  </p>
+  <p>
+    <%= f.label :year %><br>
+    <%= f.text_field :year %><br>
+  </p>
+  
+<% end %>
