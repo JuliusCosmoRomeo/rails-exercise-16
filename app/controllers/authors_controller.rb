@@ -33,7 +33,7 @@ class AuthorsController < ApplicationController
     @author = Author.find(params[:id])
     @author.destroy
 
-    redirect_to author_path
+    redirect_to authors_path
   end
   
   def author_params

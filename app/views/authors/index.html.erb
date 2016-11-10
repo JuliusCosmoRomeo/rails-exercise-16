@@ -8,6 +8,7 @@
   </tr>
  
   <% @authors.each do |author| %>
+    <%= author = @authors[0] %>
     <tr>
       <td><%= author.name %></td>
       <td><%= author.homepage %></td>
