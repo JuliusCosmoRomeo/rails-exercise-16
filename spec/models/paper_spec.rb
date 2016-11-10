@@ -20,6 +20,6 @@ RSpec.describe Paper, type: :model do
 	  	expect(build(:paper, year: nil)).to_not be_valid
 	  end
 	  it "should not be valid with non-integer year" do
-	  	expect(build(:paper, year: '1945')).to_not be_valid
+	  	expect(build(:paper, year: "nineteen-fifty")).to_not be_valid
 	  end
 end
