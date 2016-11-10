@@ -13,5 +13,7 @@ RSpec.describe Paper, type: :model do
 	  it "should not be valid without title" do
 	  	expect(build(:paper, title: "")).to_not be_valid
 	  end
-
+	  it "should not be valid without venue" do
+	  	expect(build(:paper, venue: "")).to_not be_valid
+	  end
 end
