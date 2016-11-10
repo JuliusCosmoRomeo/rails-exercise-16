@@ -8,13 +8,12 @@
   </tr>
  
   <% @papers.each do |paper| %>
-    <%= paper = @papers[0] %>
     <tr>
       <td><%= paper.title %></td>
       <td><%= paper.venue %></td>
       <td><%= paper.year %></td>
       <td><%= link_to 'Show', paper_path(paper) %></td>
-      
+      <td> <%= link_to 'Edit', edit_paper_path(paper)  %> </td>
     </tr>
   <% end %>
   <%= link_to 'Add paper', new_paper_path  %> 
