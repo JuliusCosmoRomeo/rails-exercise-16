@@ -14,6 +14,7 @@ RSpec.describe '/authors/index', type: :view  do
 			expect(rendered).to have_selector "a", text: "Edit"
 			expect(rendered).to have_selector "a", text: "Show"
 			expect(rendered).to have_selector "a", text: "Destroy"
+			
 		end
 		
 end

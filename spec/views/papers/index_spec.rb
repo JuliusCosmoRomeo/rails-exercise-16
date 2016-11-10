@@ -7,6 +7,7 @@ RSpec.describe '/papers/index', :type => :view do
 		expect(rendered).to match /COMPUTING MACHINERY AND INTELLIGENCE/
 		expect(rendered).to match /Mind 49: 433-460/
 		expect(rendered).to match /1950/
+		expect(rendered).to have_selector("a",:text => "Add paper")
 	end
 	
 end
