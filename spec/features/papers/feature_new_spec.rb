@@ -20,5 +20,7 @@ describe "Paper page", :type => :feature do
     click_button 'Create paper'    
     expect(page).to have_text("Title can't be blank")
     expect(page).to have_text("Venue can't be blank")
+    expect(page).to have_text("Year is not a number")
+    
   end
 end
