@@ -31,4 +31,14 @@ describe "Author edit page"
   #expect(Author.where(first_name:"Alan Mathison", last_name:"Turing", homepage:"http://wikipedia.org/Alan_Turing")).to exist
   expect(Author.find(@author.id).first_name).to eq("Alan Mathison") 
   end
+
+describe "Author deletion"
+  it "should delete an author" do
+  @author = create(:author)
+  visit authors_path
+  @size = Author.all.size
+  click_link 'Destroy'
+  #page.all('a', :text => 'Destroy')[1].click
+  expect(Author.all.size).to eq(@size-1)
+end
 end
