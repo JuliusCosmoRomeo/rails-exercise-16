@@ -15,6 +15,11 @@ RSpec.describe PapersController, type: :controller do
 		get :index
 		expect(response).to render_template("index")
 	end
+	it "should render 'edit' page " do
+		create(:paper)
+		get :edit, id: 1
+		expect(response).to render_template("edit")
+	end
 	
 	
 end
