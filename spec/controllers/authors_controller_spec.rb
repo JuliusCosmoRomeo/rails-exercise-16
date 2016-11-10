@@ -9,8 +9,8 @@ RSpec.describe AuthorsController, type: :controller do
 		end
 	describe "Show author page"
 		it "renders the authors page" do
-			@author = create(:author)
-			get :show, id: @author.id
+			create(:author)
+			get :show, id: 1
 			expect(response).to render_template("show")
 		end
 	describe "Get authors index page"
@@ -20,8 +20,8 @@ RSpec.describe AuthorsController, type: :controller do
 		end
 	describe "Authors edit page"
 		it "should render" do
-			@author = create(:author)
-			get :edit, id: @author.id
+			create(:author)
+			get :edit, id: 1
 			expect(response).to render_template("edit")
 		end
 	
