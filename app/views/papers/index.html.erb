@@ -14,6 +14,7 @@
       <td><%= paper.year %></td>
       <td><%= link_to 'Show', paper_path(paper) %></td>
       <td> <%= link_to 'Edit', edit_paper_path(paper)  %> </td>
+      <td> <%= link_to 'Destroy', {action: :destroy, controller: :papers, id: paper.id}, method: :delete  %> </td>
     </tr>
   <% end %>
   <%= link_to 'Add paper', new_paper_path  %> 

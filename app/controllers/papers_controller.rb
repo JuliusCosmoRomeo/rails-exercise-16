@@ -31,6 +31,12 @@ def create
 	end
 end
 
+def destroy 
+	@paper = Paper.find(params[:id])
+	@paper.destroy
+	render 'index'
+end
+
 def paper_params
 	params.require(:paper).permit(:title, :venue, :year)
 end

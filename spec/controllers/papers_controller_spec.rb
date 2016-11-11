@@ -20,6 +20,12 @@ RSpec.describe PapersController, type: :controller do
 		get :edit, id: 1
 		expect(response).to render_template("edit")
 	end
-	
-	
+	it "should redirect to 'papers' when a paper is deleted" do
+		create(:paper)
+		@size = Paper.all.size
+		get :destroy, id: 1
+		expect(response).to render_template("index")
+		expect(@size-1).to eq Paper.all.size
+		
+	end
 end
