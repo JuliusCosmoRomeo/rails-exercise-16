@@ -34,7 +34,7 @@ end
 def destroy 
 	@paper = Paper.find(params[:id])
 	@paper.destroy
-	render 'index'
+	redirect_to papers_path
 end
 
 def paper_params
