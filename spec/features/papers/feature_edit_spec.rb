@@ -9,17 +9,5 @@ describe "Paper edit page", :type => :feature do
   click_button 'Edit paper'
   expect(Paper.find(@paper.id).year).to eq(1951) 
   end
-  it "should save Peter Plagiarist as author" do
-  @paper = create(:paper)
-  @author2 = create(:author2)
-  visit edit_paper_path(@paper)
-  #find(:select, 'paper_author_id_1').find(:option, 'Peter Plagiarist').select_option
-  select "Peter Plagiarist", :from => "paper_author_id_2"
-  select "Peter Plagiarist", :from => "paper_author_id_3"
-  
-  
-  click_button 'Edit paper'
-  expect(@paper.authors).to include(@author2) 
-  end
     
 end
