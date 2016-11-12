@@ -13,11 +13,13 @@ describe "Paper edit page", :type => :feature do
   @paper = create(:paper)
   @author2 = create(:author2)
   visit edit_paper_path(@paper)
-  @size = @paper.authors.size
-  select "Peter Plagiarist", :from => "paper_author_id_1"
+  #find(:select, 'paper_author_id_1').find(:option, 'Peter Plagiarist').select_option
+  select "Peter Plagiarist", :from => "paper_author_id_2"
+  select "Peter Plagiarist", :from => "paper_author_id_3"
+  
   
   click_button 'Edit paper'
   expect(@paper.authors).to include(@author2) 
   end
-  
+    
 end
