@@ -5,4 +5,10 @@ FactoryGirl.define do
     year 1950
     #authors {build_list :author, 1}
   end
+  factory :paper2 do
+    title "go to statement considered harmful "
+    venue "communications of the acm"
+    year 1968
+    #authors {build_list :author, 1}
+  end
 end

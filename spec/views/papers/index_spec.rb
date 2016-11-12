@@ -15,4 +15,5 @@ RSpec.describe '/papers/index', :type => :view do
 		expect(rendered).to have_selector "th", text: "Venue"
 		expect(rendered).to have_selector "th", text: "Year"
 	end
+	
 end

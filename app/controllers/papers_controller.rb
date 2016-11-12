@@ -34,7 +34,7 @@ class PapersController < ApplicationController
 	end
 
   def index
-    @papers = Paper.all
+    @papers = Paper.specified_year(params[:year])
   end
 
 	private

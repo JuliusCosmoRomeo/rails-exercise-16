@@ -3,4 +3,5 @@ class Paper < ActiveRecord::Base
 	validates :title, presence: true
 	validates :venue, presence: true
 	validates :year, presence: true, numericality: true
+	scope :specified_year, -> (year) { where year: year if year.present? }
 end
