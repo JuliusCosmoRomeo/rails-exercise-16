@@ -23,10 +23,5 @@ describe "Paper page", :type => :feature do
     expect(page).to have_text("Year is not a number")
     
   end
-  it "should not containt 'go to statement considered harmful'" do
-  visit new_paper_path
-    @papers = [create(:paper), create(:paper2)]
-
-  end
-
+ 
 end
