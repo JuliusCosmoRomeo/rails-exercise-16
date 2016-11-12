@@ -23,8 +23,8 @@ RSpec.describe Paper, type: :model do
 	  	expect(build(:paper, year: "nineteen-fifty")).to_not be_valid
 	  end
 	  it "should have an empty author list" do
-	  	@paper = create(:paper, authors: [])
-	  	expect(@paper.authors).to eq([])
+	  	@paper = create(:paper)
+	  	expect(@paper.authors).to eq Array.new()
 	  end
 	  
 end
