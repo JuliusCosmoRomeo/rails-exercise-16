@@ -9,6 +9,11 @@ RSpec.describe Author, type: :model do
   		expect(@author.last_name).to eq("Turing")
   		expect(@author.homepage).to eq("http://wikipedia.de/Alan_Turing") #really dont know why not wikipedia.org
   	end
+  describe "create author Alan Turing with papers" 
+    it "checks if author has empty papers list" do
+      @author= create(:author)
+      expect(@author.papers).to be_empty
+    end
   describe "full name as first name + last name" 
   	it "checks if name method returns full name" do
   		@author= create(:author)
